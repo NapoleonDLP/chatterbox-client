@@ -8,7 +8,7 @@ var RoomsView = {
   },
 
   renderRoom: function() {
-    console.log('hello from roomsView.js');
+    console.log('3) hello from roomsView.js');
     console.log('before', this.$select);
     this.$select.append('<option value="example"> example </option>');
     console.log('after', this.$select);

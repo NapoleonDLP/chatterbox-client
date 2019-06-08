@@ -10,7 +10,7 @@ var FormView = {
     // Stop the browser from submitting the form
     event.preventDefault();
 
-    console.log('hello fromView.js file!');
+    console.log('2) hello fromView.js file!');
   },
 
   setStatus: function(active) {

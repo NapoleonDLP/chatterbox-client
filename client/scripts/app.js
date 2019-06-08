@@ -5,11 +5,13 @@ var App = {
   username: 'anonymous',
 
   initialize: function() {
+    console.log('1) hello from app.js!');
     App.username = window.location.search.substr(10);
 
     FormView.initialize();
     RoomsView.initialize();
     MessagesView.initialize();
+
 
     // Fetch initial batch of messages
     App.startSpinner();
@@ -18,11 +20,11 @@ var App = {
   },
 
   fetch: function(callback = ()=>{}) {
-    console.log('hello from app.js!');
+    console.log('hello from FETCH app.js!');
     Parse.readAll((data) => {
-      // examine the response from the server request:
-      console.log('hello from app.js!');
       console.log(data);
+      Messages.data = data;
+      console.log(`data from Messages.data: ${Messages.data}`);
 
       callback();
     });
