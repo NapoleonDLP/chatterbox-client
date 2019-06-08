@@ -18,9 +18,10 @@ var App = {
   },
 
   fetch: function(callback = ()=>{}) {
-
+    console.log('hello from app.js!');
     Parse.readAll((data) => {
       // examine the response from the server request:
+      console.log('hello from app.js!');
       console.log(data);
 
       callback();
