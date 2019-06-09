@@ -9,8 +9,16 @@ var FormView = {
   handleSubmit: function(event) {
     // Stop the browser from submitting the form
     event.preventDefault();
-
-    console.log('2) hello fromView.js file!');
+    var submitMessage = $('#message').val(); // a message in type of a string
+    // debugger;
+    var postMessage = {
+      username: App.username,
+      roomname: 'private party',
+      text: submitMessage
+    };
+    Parse.create(postMessage, function(){
+      console.log('this message was succesfully posted to chat!');
+    });
   },
 
   setStatus: function(active) {

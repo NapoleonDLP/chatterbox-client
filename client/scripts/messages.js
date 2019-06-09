@@ -1,5 +1,5 @@
 var Messages = {
-  data: 'test',
+
   add: function(data) {
 
   }

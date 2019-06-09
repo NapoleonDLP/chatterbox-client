@@ -6,8 +6,9 @@ var App = {
 
   initialize: function() {
     console.log('1) hello from app.js!');
-    App.username = window.location.search.substr(10);
 
+    App.username = window.location.search.substr(10);
+    // debugger;
     FormView.initialize();
     RoomsView.initialize();
     MessagesView.initialize();

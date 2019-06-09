@@ -9,14 +9,20 @@ var MessagesView = {
     //   this.renderMessage(MessageView.render(results[i]));
     // }
 
-    // this.renderMessage(message);
+    console.log('this ran');
   },
 
   renderMessages: function() {
     console.log('messages !!!!!!', Messages.data);
+    var messages = Messages.data.results;
+    for (var i = 0; i < messages.length; i++) {
+      var message = messages[i];
+      this.renderMessage(MessageView.render({data: message}));
+    }
   },
 
   renderMessage: function(message) {
+    // {objectId: "lF6d1o213Z", username: "Reeky", roomname: "Talladega", text: "blah"}
     console.log('4) hello from messagesView.js!');
     console.log(this.$chats);
     this.$chats.append(message);
